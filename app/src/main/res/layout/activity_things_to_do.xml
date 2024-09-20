@@ -5,7 +5,6 @@
     android:id="@+id/recycler_view_things_to_do"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:listitem="@layout/bucket_list_item"
+    tools:listitem="@layout/item_bucket_list_entry"
     />

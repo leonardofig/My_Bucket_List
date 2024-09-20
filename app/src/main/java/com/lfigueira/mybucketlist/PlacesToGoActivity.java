@@ -10,20 +10,24 @@ public class PlacesToGoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_places_to_go);
+        setupList();
 
-        RecyclerView thingsToDoList = findViewById(R.id.recycler_view_places_to_go);
+    }
 
-        BucketListItem[] bucketListItems = {
-                new BucketListItem("Machu Picchu - Peru"),
-                new BucketListItem("Sistine Chapel - Vatican"),
-                new BucketListItem("Venice - Italy"),
-                new BucketListItem("San Francisco - USA"),
-                new BucketListItem("Santorini - Greece"),
-                new BucketListItem("Bora Bora - French Polynesia"),
-                new BucketListItem("Bagan, Myanmar")
+    private void setupList() {
+        BucketListEntry[] placesToGo = {
+                new BucketListEntry("Machu Picchu - Peru","Lost city of the Incas high in the Andes.",R.drawable.machu_pichu,5),
+                new BucketListEntry("Sistine Chapel - Vatican","Michelangelo's masterpiece of Renaissance art.",R.drawable.sistine_chapel,5),
+                new BucketListEntry("Venice - Italy","Romantic canals, gondolas, and historic bridges.",R.drawable.venice,5),
+                new BucketListEntry("San Francisco - USA","Iconic Golden Gate Bridge and vibrant culture.",R.drawable.san_francisco,5),
+                new BucketListEntry("Santorini - Greece","Stunning sunsets and white-washed villages.",R.drawable.santorini,5),
+                new BucketListEntry("Bora Bora - French Polynesia","Overwater bungalows and turquoise waters.",R.drawable.bora_bora,5),
+                new BucketListEntry("Bagan, Myanmar","Thousands of ancient temples and pagodas.",R.drawable.bagan_myanmar,5)
         };
 
-        BucketListItemAdapter adapter = new BucketListItemAdapter(bucketListItems);
-        thingsToDoList.setAdapter(adapter);
+        RecyclerView placesToDoList = findViewById(R.id.recycler_view_places_to_go);
+
+        BucketListEntryAdapter adapter = new BucketListEntryAdapter(placesToGo);
+        placesToDoList.setAdapter(adapter);
     }
 }

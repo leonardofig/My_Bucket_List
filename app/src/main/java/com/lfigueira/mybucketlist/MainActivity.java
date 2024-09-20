@@ -1,9 +1,12 @@
 package com.lfigueira.mybucketlist;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,18 +16,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setupClickListeners();
 
-
     }
 
     private void setupClickListeners() {
-        RecyclerView list = findViewById(R.id.recycler_view_items);
 
-        Item[] items = {
-                new Item("Things to do", R.drawable.things_to_do, ThingsToDoActivity.class),
-                new Item("Places to go", R.drawable.places_to_go, PlacesToGoActivity.class)
-        };
+        CardView thingsToDoCard = findViewById(R.id.card_view_things_to_do);
+        CardView placesToGoCard = findViewById(R.id.card_view_place_to_go);
 
-        ItemsAdapter adapter = new ItemsAdapter(items);
-        list.setAdapter(adapter);
+        thingsToDoCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ThingsToDoActivity.class);
+                startActivity(intent);
+            }
+        });
+        placesToGoCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PlacesToGoActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
 }
