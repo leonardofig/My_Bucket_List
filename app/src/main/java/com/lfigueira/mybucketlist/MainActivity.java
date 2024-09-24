@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setupClickListeners();
-
     }
 
     private void setupClickListeners() {
@@ -35,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PlacesToGoActivity.class);
                 startActivity(intent);
-
             }
         });
 

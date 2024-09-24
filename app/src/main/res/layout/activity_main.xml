@@ -22,9 +22,9 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="List of things to do"
             android:scaleType="centerCrop"
-            android:src="@drawable/things_to_do"
-            android:contentDescription="List of things to do"/>
+            android:src="@drawable/things_to_do" />
 
         <View
             android:layout_width="match_parent"
@@ -55,13 +55,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="List of places to go"
             android:scaleType="centerCrop"
             android:src="@drawable/places_to_go" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="List of places to go"
             android:background="@drawable/gradient_background" />
 
         <TextView
