@@ -23,7 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/things_to_do" />
+            android:src="@drawable/things_to_do"
+            android:contentDescription="List of things to do"/>
 
         <View
             android:layout_width="match_parent"
@@ -60,6 +61,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="List of places to go"
             android:background="@drawable/gradient_background" />
 
         <TextView
